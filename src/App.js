@@ -1,12 +1,20 @@
+import Header from "./components/Header/Index";
 import "./index.css"
 
 function App() {
   return (
-    <div className="App">
- 
+  <>
+  
+  <section className="todoapp">
+   
+   <Header/>
 
- 
-    </div>
+
+  </section>
+  
+  
+  
+  </>
   );
 }
 
