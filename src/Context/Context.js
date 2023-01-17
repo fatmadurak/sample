@@ -1,7 +1,8 @@
 import { createContext,useContext,useState } from "react";
 
 
-const 
+const TodoContext=createContext();
+
 
 export const TodoProvider=({children})=>{
 
@@ -20,8 +21,22 @@ setTodos,
 
 }
 
+return <TodoContext.Provider value={values}>{children}</TodoContext.Provider>
 
-<
+}
+
+
+export const UseTodo=()=>{
+
+const ontext=useContext(TodoContext);
+
+if (context===undefined) {
+    
+  throw new Error("context is not founded")
+
+}
+
+return context;
 
 
 }
