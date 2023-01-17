@@ -28,7 +28,7 @@ return <TodoContext.Provider value={values}>{children}</TodoContext.Provider>
 
 export const UseTodo=()=>{
 
-const ontext=useContext(TodoContext);
+const context=useContext(TodoContext);
 
 if (context===undefined) {
     

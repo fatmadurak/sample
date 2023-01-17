@@ -1,5 +1,5 @@
 import Header from "./components/Header/Index";
-import Content from "./components/Content/Index"
+import Content from "./components/Content/List"
 import "./index.css"
 import { TodoProvider } from "./Context/Context";
 
