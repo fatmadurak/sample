@@ -15,7 +15,7 @@ function ListItem({todo}) {
             <div className="view">
                 <input className="toggle" type="checkbox" checked={todo.completed} />
                 <label>{todo.text}</label>
-                <button className="destroy" onClick={onDestroy(todo.id)}></button>
+                <button className="destroy" onClick={()=>onDestroy(todo.id)}></button>
             </div>
         </li>
   )

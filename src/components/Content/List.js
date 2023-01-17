@@ -1,5 +1,6 @@
 import React from 'react'
 import { UseTodo } from '../../Context/Context'
+import ContentFooter from './ContentFooter';
 import ListItem from './ListItem';
 
 function List() {
@@ -19,6 +20,8 @@ function List() {
 
        }
    </ul>
+
+   <ContentFooter/>
 </section>
 
   )
