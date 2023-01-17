@@ -7,6 +7,7 @@ const TodoContext=createContext();
 
 export const TodoProvider=({children})=>{
 
+const [filter]=useState("all")
 const[todos,setTodos]=useState([{
 
 id:1,
@@ -36,12 +37,24 @@ setTodos(clone_todos)
 
 }
 
+const toggleTodo=(id)=>{
+
+    const clone_todos=[...todos]
+    const index=clone_todos.findIndex((todo)=>todo.id===id)
+    clone_todos[index].completed=!clone_todos[index].completed
+    setTodos(clone_todos)
+   
+
+}
+
 const values={
 
 todos,
 setTodos,
 addTodo,
 deleteTodo,
+toggleTodo,
+filter,
 
 }
 
