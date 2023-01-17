@@ -1,8 +1,11 @@
 import React from 'react'
 import {Formik,Field,Form} from "formik"
 import validations from './Validations';
+import { UseTodo } from '../../../Context/Context';
 
 function FormTodo() {
+
+  const{addTodo}=UseTodo();
   return (
  
     <Formik
@@ -13,11 +16,12 @@ function FormTodo() {
 
     }}
     
-    onSubmit={(values) => {
+    onSubmit={(values,bag) => {
      
-        alert(JSON.stringify(values, null, 2));
-  
-        console.log(values.text)
+ 
+     
+        addTodo(values.text)
+        bag.resetForm();
 
 
       }}
