@@ -12,7 +12,7 @@ function List() {
     if (filter!=="all") {
       
    
-      filtered=todos.filter((todo)=>filter=="active" ? todo.completed===false && todo :todo.completed===true && todo)
+      filtered=todos.filter((todo)=>filter==="active" ? todo.completed===false && todo :todo.completed===true && todo)
 
 
     }
